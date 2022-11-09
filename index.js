@@ -19,7 +19,12 @@ Do the following:
 
    HINT: no function required
 */
-
+let votingAge = 18
+if(votingAge >= 18) {
+  console.log(true)
+} else {
+  console.log(false)
+}
 
 
 /*
@@ -34,8 +39,14 @@ Do the following:
    HINT: no function required
 */
 
+let cat = "meow";
+let dog = "bark";
 
-
+if ( dog === "bark"){
+  cat = "don't bark at me bitch";
+} else {
+}
+console.log (cat);
 
 
 /*
