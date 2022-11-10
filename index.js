@@ -318,9 +318,19 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+const vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"];
+
+function vowelCounter(word) {
+    let count = 0;
+    let vowelsArr = word.split("");
+    vowelsArr.forEach((vowel)=> {
+      if(vowels.includes(vowel)) {
+        count++;
+      }
+    });
+    return `Hello world. This word contains ${count} vowles`;
 }
+console.log(vowelCounter("MichaElLOvElAce"));
 
 
 
