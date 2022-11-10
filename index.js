@@ -201,7 +201,7 @@ if(computer === 0) {
 
 function game(user, computer){
   if(user === computer) {
-    return "it's a tie!"
+    return "it's a tie"
   } else if(user === "rock" && computer === "scissors") {
     return "you win!"
   } else if(user === "scissors" && computer === "paper") {
