@@ -19,8 +19,12 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let votingAge = 18
+if(votingAge >= 18) {
+  console.log(true)
+} else {
+  console.log(false)
+}
 
 /*
 Task 1b - Values (not auto tested)
@@ -34,6 +38,14 @@ Do the following:
    HINT: no function required
 */
 
+let firstThing = "Hello"
+let secondThing = "World"
+if(secondThing === "World") {
+  firstThing = "I am reassigning this variable to this sentence because the conditional is true."
+} else {
+  firstThing = "The conditional was false."
+}
+console.log(firstThing)
 
 
 
@@ -48,9 +60,8 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
-
+let num = "1999"
+console.log(typeof Number(num))
 
 /*
 Task 1d - Multiply
@@ -61,10 +72,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(num1, num2){
-  return num1 * num2;
+function multiply(a, b){
+  return a * b;
 }
-
+console.log(multiply(8, 8))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -77,10 +88,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+  return age * 7
 }
-
+console.log(dogYears(43))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
