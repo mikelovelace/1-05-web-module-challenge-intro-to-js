@@ -184,10 +184,30 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user, computer){
-  /*add your code here*/
+let random = Math.floor(Math.random() * 3)
+
+if(random === 0) {
+  random === "rock"
+} else if(random === 1) {
+  random === "paper"
+} else {
+  random === "scissors"
 }
 
+function game(user, computer){
+  if(user === computer) {
+    return "it's a tie"
+  } else if(user === "rock" && computer === "scissors") {
+    return "you win!"
+  } else if(user === "paper" && computer === "rock") {
+    return "you win!"
+  } else if(user === "scissors" && computer === "paper") {
+    return "you win!"
+  } else {
+    return "you lose!"
+  }
+}
+console.log(game(0, random))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -201,10 +221,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * 0.621371
 }
-
+console.log(miles(43))
 
 
 //Task 5b - Centimeters to Feet
@@ -215,9 +235,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48
 }
+
+console.log(feet(13))
 
 
 
@@ -235,8 +257,12 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(num){
+      return `${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num - 1} bottles of soda on the wall`
+}
+
+for(let i = 99; i > 0; i --) {
+  console.log(annoyingSong(i))
 }
 
 
@@ -255,9 +281,21 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(grade){
+  if(grade >= 90) {
+    return "you got an A"
+  } else if(grade >= 80 && grade <= 89) {
+    return "you got a B"
+  } else if( grade >= 70 && grade <= 79) {
+    return "you got a C"
+  } else if(grade >= 60 && grade <= 69) {
+    return "you got a D"
+  } else {
+    return "you got an F"
+  }
 }
+
+console.log(grade(96))
 
 
 
@@ -274,9 +312,19 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+const vowels = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"];
+
+function vowelCounter(word) {
+    let count = 0;
+    let vowelsArr = word.split("");
+    vowelsArr.forEach((vowel)=> {
+      if(vowels.includes(vowel)) {
+        count++;
+      }
+    });
+    return `${count} vowels`;
 }
+console.log(vowelCounter("MichaElLOvElAceeeeeeee"));
 
 
 
